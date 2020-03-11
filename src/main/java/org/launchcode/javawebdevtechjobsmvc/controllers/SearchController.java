@@ -23,8 +23,8 @@ public class SearchController {
         return "search";
     }
 
-    @RequestMapping(value="results")
-    public String displaySearchResults (Model model, String searchType, String searchTerm){
+    @PostMapping(value="results")
+    public String displaySearchResults (Model model, @RequestParam String searchType, @RequestParam String searchTerm){
 
         ArrayList<Job> jobs;
 
